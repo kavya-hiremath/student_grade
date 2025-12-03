@@ -1,38 +1,18 @@
-import sys
-
-# Check if 5 subject marks are provided
-if len(sys.argv) == 6:
-    script_name = sys.argv[0]
-    Eng = float(sys.argv[1])
-    Math = float(sys.argv[2])
-    Sci = float(sys.argv[3])
-    Hindi = float(sys.argv[4])
-    SS = float(sys.argv[5])
-    print("User provided input values:")
+m1=float(input("enter marks for sub1:"))
+m2=float(input("enter marks for sub2:"))
+m3=float(input("enter marks for sub3:"))
+m4=float(input("enter marks for sub4:"))
+m5=float(input("enter marks for sub5:"))
+average=(m1+m2+m3+m4+m5)/5
+if average >=90:
+    grade='A'
+elif average >=80:
+    grade='B'
+elif average >=75:
+    grade='C'
+elif average >=60:
+    grade='D'
 else:
-    script_name = sys.argv[0]
-    Eng = 75
-    Math = 80
-    Sci = 70
-    Hindi = 85
-    SS = 90
-    print("No input given - using default values:")
-# Calculate average
-average = (Eng + Math + Sci + Hindi + SS) / 5
-# Grade calculation
-if average >= 90:
-    grade = "A"
-elif average >= 75:
-    grade = "B"
-elif average >= 60:
-    grade = "C"
-elif average >= 50:
-    grade = "D"
-else:
-    grade = "Fail"
-
-# Display results
-print("Script Name:", script_name)
-print("Marks:", Eng,Math,Sci,Hindi,SS)
-print("Average Marks:", round(average, 2))
-print("Grade:", grade)
+    grade='Fail'
+print("Average marks:",average)
+print("Grade:",grade)
